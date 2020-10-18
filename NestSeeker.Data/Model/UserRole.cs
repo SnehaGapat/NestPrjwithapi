@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace NestSeeker.Data.Model
+{
+  public class UserRole
+    {
+        public int Id { get; set; }
+        public int RoleId { get; set; } //FK
+        public int UserId { get; set; } //FK
+        public Role Role { get; set; }
+        public User User { get; set; }
+
+        public List<User> Users { get; set; }
+        public IList<Property> Property { get; set; }
+        public IList<MyFavourites> MyFavourites { get; set; }
+    }
+}
