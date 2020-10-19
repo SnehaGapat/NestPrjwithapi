@@ -40,6 +40,8 @@ namespace NestSeeker.Data.Model
         public IList<MyFavourites> MyFavourites { get; set; }
         public IList<Requests> Request { get; set; }
 
+        public List<Document> Documents { get; set; }
+
 
     }
 }

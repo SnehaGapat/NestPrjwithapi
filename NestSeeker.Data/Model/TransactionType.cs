@@ -7,6 +7,7 @@ namespace NestSeeker.Data.Model
     public class TransactionType
     {
         public int Id { get; set; }
+        public string Name { get; set; }
         public IList<Requests> Request { get; set; }
     }
 }

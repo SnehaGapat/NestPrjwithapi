@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NestSeeker.Data\NestSeeker.Data.csproj" />
+    <ProjectReference Include="..\NestSeeker.Persistence\NestSeeker.Persistence.csproj" />
+  </ItemGroup>
+
+</Project>

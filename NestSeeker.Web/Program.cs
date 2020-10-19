@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace NestSeekers.Web
+namespace NestSeeker.Web
 {
     public class Program
     {
