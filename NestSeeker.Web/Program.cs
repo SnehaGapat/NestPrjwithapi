@@ -17,6 +17,7 @@ namespace NestSeeker.Web
             var host = hostBuilder.Build();
             host.Run();
           //  CreateHostBuilder(args).Build().Run();
+
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
