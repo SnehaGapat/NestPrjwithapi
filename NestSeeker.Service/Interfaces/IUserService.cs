@@ -10,6 +10,8 @@ namespace NestSeeker.Service
         IEnumerable<User> GetAllUser();
         User GetById(int id);
         User GetByEmail(string email);
-        int AddUser(User user);
+        User AddUser(User user);
+        User UpdateUser(User user);
+        bool DeleteUser(int userId);
     }
 }

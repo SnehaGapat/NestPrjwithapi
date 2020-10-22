@@ -24,7 +24,8 @@ namespace NestSeeker.Persistence
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string connectionString = "Data Source=RM-PC\\MYSQLSERVER;Initial Catalog=NestSeekerDatabase; Integrated Security=True";
+            string connectionString = "Data Source=SNEHAL-PC\\SQLEXPRESS02\\MYSQLSERVER;Initial Catalog=NestSeekerDatabase; Integrated Security=True";
+  
             optionsBuilder.UseSqlServer(connectionString);
         }
 

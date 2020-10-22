@@ -38,7 +38,7 @@ namespace NestSeeker.Service
 
         }
 
-        public int AddUser(User user)
+        public User AddUser(User user)
         {
            /* NestSeekerContext context = new NestSeekerContext();
             context.Users.Add(user);
@@ -48,7 +48,30 @@ namespace NestSeeker.Service
 
              this._unitOfWork.UserRepository.Add(user);
              this._unitOfWork.Save();
-             return user.Id;
+             return user;
+        }
+        public bool DeleteUser(int userId)
+        {
+            /* NestSeekerContext context = new NestSeekerContext();
+             context.Users.Add(user);
+             context.SaveChanges();
+             return user.Id;*/
+            User user = this._unitOfWork.UserRepository.GetById(userId);
+            if (user != null)
+            {
+                this._unitOfWork.UserRepository.Remove(user);
+                this._unitOfWork.Save();
+                return true;
+            }
+            return false;
+        }
+
+        public User UpdateUser(User user)
+        {
+            this._unitOfWork.UserRepository.Update(user);
+            this._unitOfWork.Save();
+            return user;
+
         }
     }
 }

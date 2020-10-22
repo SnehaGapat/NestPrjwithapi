@@ -17,6 +17,10 @@ namespace NestSeeker.Persistence.Infrastructure
         {
             this._context.Set<T>().Add(entity);
         }
+        public void Update(T entity)
+        {
+            this._context.Set<T>().Update(entity);
+        }
 
         public IEnumerable<T> Find(Expression<Func<T, bool>> predicate)
         {

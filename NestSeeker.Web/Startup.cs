@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
@@ -19,9 +20,12 @@ namespace NestSeeker.Web
 {
     public class Startup
     {
+        //private readonly IConfigurationRoot _configRoot;
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+           /* IConfigurationBuilder builder = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json");
+            this._configRoot = builder.Build();*/
         }
 
         public IConfiguration Configuration { get; }
@@ -32,9 +36,9 @@ namespace NestSeeker.Web
             services.AddControllers();
             services.AddTransient<IUserService,UserService>();
             services.AddTransient<NestSeekerContext>();
-
             services.AddTransient<IUnitOfWork, UnitOfWork>(); //RP
             services.AddTransient<IRepository<User>, Repository<User>>(); //RP
+           // services.AddDbContext<NestSeekerContext>(Configuration, _configRoot);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
